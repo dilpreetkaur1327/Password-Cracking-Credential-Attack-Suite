@@ -1,0 +1,4 @@
+root:$6$saltsalt$abcdefghijklmno1234567890abcdefghijklmnopqrstuvwx:19000:0:99999:7:::
+alice:$6$saltsalt$abcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdef:19000:0:99999:7:::
+bob:$1$saltsalt$abcdefabcdefabcdefabcdefabcdefabcdef:19000:0:99999:7:::
+charlie:$5$saltsalt$abcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdef:19000:0:99999:7:::

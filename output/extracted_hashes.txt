@@ -1,0 +1,4 @@
+root:$6$saltsalt$abcdefghijklmno1234567890abcdefghijklmnopqrstuvwx [SHA-512]
+alice:$6$saltsalt$abcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdef [SHA-512]
+bob:$1$saltsalt$abcdefabcdefabcdefabcdefabcdefabcdef [MD5]
+charlie:$5$saltsalt$abcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdef [SHA-256]
