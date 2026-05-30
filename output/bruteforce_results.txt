@@ -1,0 +1,3 @@
+Brute-Force Simulation Results
+========================================
+NOT FOUND | Hash: ... | Attempts: 140 | Time: 0.001s
