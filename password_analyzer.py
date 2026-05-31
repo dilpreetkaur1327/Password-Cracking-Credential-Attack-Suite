@@ -28,11 +28,15 @@ def analyze_passwords():
             length = len(pw)
             complexity = sum([any(f(pw) for f in [str.islower, str.isupper, str.isdigit, lambda x: not x.isalnum()])])
             verdict = 'Weak'
+            recommendation = ''
             if length >= 12 and ent > 50:
                 verdict = 'Strong'
             elif length >= 8 and ent > 35:
                 verdict = 'Moderate'
-            results.append(f"{pw}: Length={length}, Entropy={ent}, Verdict={verdict}")
+            if verdict == 'Weak':
+                recommendation = 'Recommendation: Use 12+ characters, mix upper/lowercase, numbers, and symbols.'
+                print(f"{pw}: Length={length}, Entropy={ent}, Verdict={verdict}\n  {recommendation}")
+            results.append(f"{pw}: Length={length}, Entropy={ent}, Verdict={verdict}" + (f"\n  {recommendation}" if recommendation else ""))
     with open(output_path, 'w') as outfile:
         for line in results:
             outfile.write(line + '\n')

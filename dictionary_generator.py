@@ -25,11 +25,21 @@ def generate_dictionary():
         # Append numbers
         for n in range(0, 10):
             mutations.add(f"{word}{n}")
+        # Name+DOB and other patterns
+        dob = '2001'
+        mutations.add(f"{word}{dob}")
+        mutations.add(f"{word}123")
+        mutations.add(f"{word}@1")
+        mutations.add(f"{word.upper()}@1")
         return mutations
 
     wordlist = set()
     for username in usernames:
         wordlist.update(mutate(username))
+
+    # Add common keyboard patterns
+    keyboard_patterns = ['qwerty', '123456', 'password', 'admin']
+    wordlist.update(keyboard_patterns)
 
     with open(output_path, 'w') as outfile:
         for word in sorted(wordlist):
